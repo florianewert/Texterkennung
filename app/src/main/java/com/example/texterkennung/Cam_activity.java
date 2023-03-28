@@ -33,6 +33,7 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -60,7 +61,7 @@ import java.util.HashMap;
 public class Cam_activity extends AppCompatActivity {
     CameraSource cameraSource;
     SurfaceView surfaceView;
-    Button scan, cancel;
+    ImageButton scan, cancel;
     private static final int PERMISSION = 100;
     Bitmap bitmap;
     SurfaceView imageView;
@@ -114,6 +115,7 @@ public class Cam_activity extends AppCompatActivity {
         scan = findViewById(R.id.btnScan);
         cancel = findViewById(R.id.btnCancel);
         imageView = findViewById(R.id.surfaceView2);
+        imageView.setVisibility(View.INVISIBLE);
     }
 
     public void startCamera(){
